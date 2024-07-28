@@ -115,8 +115,8 @@ def approve_or_disapprove_user(message):
 
     if action == '/approve':
         if plan == 1:  # Instant Plan 🧡
-            if users_collection.count_documents({"plan": 1}) >= 99:
-                bot.send_message(chat_id, "*Approval failed: Instant Plan 🧡 limit reached (99 users).*", parse_mode='Markdown')
+            if users_collection.count_documents({"plan": 1}) >= 999:
+                bot.send_message(chat_id, "*Approval failed: Instant Plan 🧡 limit reached (999 users).*", parse_mode='Markdown')
                 return
         elif plan == 2:  # Instant++ Plan 💥
             if users_collection.count_documents({"plan": 2}) >= 499:
